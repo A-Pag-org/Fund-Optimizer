@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory - Browse & Explore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">Employee Directory</h1>
+                <div class="header-actions">
+                    <button class="btn-secondary" id="viewSimulation">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        View Simulation (<span id="simulationCount">0</span>)
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Carousel Sections -->
+        <main class="main-content">
+            <!-- Carousel 1: All Employees -->
+            <section class="carousel-section" role="region" aria-label="All Employees Carousel">
+                <div class="carousel-header">
+                    <h2 class="carousel-title">All Employees</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous employees" data-carousel="all-employees">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next employees" data-carousel="all-employees">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="all-employees" data-carousel-track="all-employees">
+                        <!-- Cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carousel 2: Recently Active -->
+            <section class="carousel-section" role="region" aria-label="Recently Active Employees Carousel">
+                <div class="carousel-header">
+                    <h2 class="carousel-title">Recently Active</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous active employees" data-carousel="recently-active">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next active employees" data-carousel="recently-active">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="recently-active" data-carousel-track="recently-active">
+                        <!-- Cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carousel 3: By Program -->
+            <section class="carousel-section" role="region" aria-label="By Program Carousel">
+                <div class="carousel-header">
+                    <h2 class="carousel-title">By Program</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous program employees" data-carousel="by-program">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next program employees" data-carousel="by-program">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="by-program" data-carousel-track="by-program">
+                        <!-- Cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Detail Panel (Side Drawer) -->
+        <aside class="detail-panel" id="detailPanel" role="dialog" aria-modal="true" aria-labelledby="detailPanelTitle">
+            <div class="detail-panel-overlay" id="detailPanelOverlay"></div>
+            <div class="detail-panel-content">
+                <div class="detail-panel-header">
+                    <button class="detail-panel-close" id="closeDetailPanel" aria-label="Close detail panel">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="detail-panel-body" id="detailPanelBody">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
