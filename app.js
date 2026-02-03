@@ -15,7 +15,15 @@ const state = {
 // INITIALIZATION
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
-    initializeCarousels();
+    // Check if we're on employee page (has employee carousels)
+    const isEmployeePage = document.getElementById('all-employees');
+    
+    if (isEmployeePage) {
+        // Initialize employee carousels
+        initializeCarousels();
+    }
+    
+    // Initialize common features (works on both pages)
     initializeEventListeners();
     initializeKeyboardNavigation();
 });
