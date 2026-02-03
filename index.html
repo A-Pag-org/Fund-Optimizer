@@ -100,6 +100,55 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Donor Carousels -->
+            <!-- Carousel 4: All Donors -->
+            <section class="carousel-section" role="region" aria-label="All Donors Carousel">
+                <div class="carousel-header">
+                    <h2 class="carousel-title">All Donors</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous donors" data-carousel="all-donors">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next donors" data-carousel="all-donors">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="all-donors" data-carousel-track="all-donors">
+                        <!-- Donor cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carousel 5: Donors Needing Attention -->
+            <section class="carousel-section" role="region" aria-label="Donors Needing Attention Carousel">
+                <div class="carousel-header">
+                    <h2 class="carousel-title">Donors Needing Attention</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous donors" data-carousel="donors-warning">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next donors" data-carousel="donors-warning">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="donors-warning" data-carousel-track="donors-warning">
+                        <!-- Donor cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- Detail Panel (Side Drawer) -->
