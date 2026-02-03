@@ -522,15 +522,15 @@ function showNotification(message) {
         position: fixed;
         bottom: 32px;
         right: 32px;
-        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-        color: white;
+        background: linear-gradient(135deg, #FDDC00 0%, #E6C300 100%);
+        color: #1F2E2E;
         padding: 16px 24px;
         border-radius: 12px;
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
         z-index: 300;
         animation: slideIn 0.3s ease-out;
         font-family: var(--font-family);
-        font-weight: 500;
+        font-weight: 600;
     `;
     notification.textContent = message;
     
