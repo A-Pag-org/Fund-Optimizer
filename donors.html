@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Directory - Browse & Explore</title>
+    <title>Donor Directory - Browse & Explore</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,10 @@
         <!-- Header -->
         <header class="app-header">
             <div class="header-content">
-                <h1 class="app-title">Employee Directory</h1>
+                <h1 class="app-title">Donor Directory</h1>
                 <div class="header-actions">
                     <nav class="page-navigation">
-                        <a href="index.html" class="nav-link active">
+                        <a href="index.html" class="nav-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
@@ -27,7 +27,7 @@
                             </svg>
                             Employees
                         </a>
-                        <a href="donors.html" class="nav-link">
+                        <a href="donors.html" class="nav-link active">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
@@ -47,17 +47,17 @@
 
         <!-- Carousel Sections -->
         <main class="main-content">
-            <!-- Carousel 1: All Employees -->
-            <section class="carousel-section" role="region" aria-label="All Employees Carousel">
+            <!-- Carousel 1: All Donors -->
+            <section class="carousel-section" role="region" aria-label="All Donors Carousel">
                 <div class="carousel-header">
-                    <h2 class="carousel-title">All Employees</h2>
+                    <h2 class="carousel-title">All Donors</h2>
                     <div class="carousel-controls">
-                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous employees" data-carousel="all-employees">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous donors" data-carousel="all-donors">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
-                        <button class="carousel-btn carousel-btn-next" aria-label="Next employees" data-carousel="all-employees">
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next donors" data-carousel="all-donors">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
@@ -65,23 +65,23 @@
                     </div>
                 </div>
                 <div class="carousel-container">
-                    <div class="carousel-track" id="all-employees" data-carousel-track="all-employees">
-                        <!-- Cards will be dynamically inserted here -->
+                    <div class="carousel-track" id="all-donors" data-carousel-track="all-donors">
+                        <!-- Donor cards will be dynamically inserted here -->
                     </div>
                 </div>
             </section>
 
-            <!-- Carousel 2: Recently Active -->
-            <section class="carousel-section" role="region" aria-label="Recently Active Employees Carousel">
+            <!-- Carousel 2: Donors Needing Attention -->
+            <section class="carousel-section" role="region" aria-label="Donors Needing Attention Carousel">
                 <div class="carousel-header">
-                    <h2 class="carousel-title">Recently Active</h2>
+                    <h2 class="carousel-title">Donors Needing Attention</h2>
                     <div class="carousel-controls">
-                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous active employees" data-carousel="recently-active">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous donors" data-carousel="donors-warning">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
-                        <button class="carousel-btn carousel-btn-next" aria-label="Next active employees" data-carousel="recently-active">
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next donors" data-carousel="donors-warning">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
@@ -89,23 +89,23 @@
                     </div>
                 </div>
                 <div class="carousel-container">
-                    <div class="carousel-track" id="recently-active" data-carousel-track="recently-active">
-                        <!-- Cards will be dynamically inserted here -->
+                    <div class="carousel-track" id="donors-warning" data-carousel-track="donors-warning">
+                        <!-- Donor cards will be dynamically inserted here -->
                     </div>
                 </div>
             </section>
 
-            <!-- Carousel 3: By Program -->
-            <section class="carousel-section" role="region" aria-label="By Program Carousel">
+            <!-- Carousel 3: By Donor Type -->
+            <section class="carousel-section" role="region" aria-label="International Donors Carousel">
                 <div class="carousel-header">
-                    <h2 class="carousel-title">By Program</h2>
+                    <h2 class="carousel-title">International Donors</h2>
                     <div class="carousel-controls">
-                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous program employees" data-carousel="by-program">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous international donors" data-carousel="donors-international">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
-                        <button class="carousel-btn carousel-btn-next" aria-label="Next program employees" data-carousel="by-program">
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next international donors" data-carousel="donors-international">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
@@ -113,8 +113,32 @@
                     </div>
                 </div>
                 <div class="carousel-container">
-                    <div class="carousel-track" id="by-program" data-carousel-track="by-program">
-                        <!-- Cards will be dynamically inserted here -->
+                    <div class="carousel-track" id="donors-international" data-carousel-track="donors-international">
+                        <!-- Donor cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carousel 4: CSR Donors -->
+            <section class="carousel-section" role="region" aria-label="CSR Donors Carousel">
+                <div class="carousel-header">
+                    <h2 class="carousel-title">CSR Donors</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-btn-prev" aria-label="Previous CSR donors" data-carousel="donors-csr">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="carousel-btn carousel-btn-next" aria-label="Next CSR donors" data-carousel="donors-csr">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="donors-csr" data-carousel-track="donors-csr">
+                        <!-- Donor cards will be dynamically inserted here -->
                     </div>
                 </div>
             </section>
@@ -142,5 +166,18 @@
 
     <script src="data.js"></script>
     <script src="app.js"></script>
+    <script>
+        // Initialize only donor carousels on this page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderDonorCarousel('all-donors', getAllDonors());
+            renderDonorCarousel('donors-warning', getDonorsByWarningStatus());
+            renderDonorCarousel('donors-international', getDonorsByType('International'));
+            renderDonorCarousel('donors-csr', getDonorsByType('CSR'));
+            
+            initializeEventListeners();
+            initializeKeyboardNavigation();
+            updateCarouselButtons();
+        });
+    </script>
 </body>
 </html>

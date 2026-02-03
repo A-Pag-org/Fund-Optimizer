@@ -16,7 +16,6 @@ const state = {
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
     initializeCarousels();
-    initializeDonorCarousels();
     initializeEventListeners();
     initializeKeyboardNavigation();
 });
