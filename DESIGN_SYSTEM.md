@@ -10,21 +10,21 @@ This document outlines the complete design system used in the Employee Directory
 
 #### Backgrounds
 ```css
---color-bg-primary: #0a0a0f      /* Deep space black - Main background */
---color-bg-secondary: #13131a    /* Dark slate - Secondary surfaces */
---color-bg-tertiary: #1a1a24     /* Midnight blue - Tertiary elements */
---color-bg-hover: #20202e        /* Hover state background */
---color-bg-card: #15151d         /* Employee card background */
---color-bg-card-hover: #1c1c28   /* Card hover state */
+--color-bg-primary: #1F2E2E      /* Dark teal - Main background */
+--color-bg-secondary: #283C3C    /* Medium teal - Secondary surfaces */
+--color-bg-tertiary: #324646     /* Lighter teal - Tertiary elements */
+--color-bg-hover: #3d5555        /* Hover state background */
+--color-bg-card: #355050         /* Employee card background */
+--color-bg-card-hover: #3d5a5a   /* Card hover state */
 ```
 
-**Usage**: Progressive layering from deepest (primary) to elevated surfaces (tertiary, hover states)
+**Usage**: Progressive layering from deepest (primary) to elevated surfaces (tertiary, hover states). Teal-green palette creates a distinctive, professional appearance.
 
 #### Text Colors
 ```css
---color-text-primary: #ffffff    /* Pure white - Headlines, primary text */
---color-text-secondary: #a0a0b8  /* Soft gray - Supporting text */
---color-text-tertiary: #6b6b85   /* Muted gray - Metadata, labels */
+--color-text-primary: #E6ECEC    /* Light gray - Headlines, primary text */
+--color-text-secondary: #B0C0C0  /* Medium gray - Supporting text */
+--color-text-tertiary: #8a9999   /* Muted gray - Metadata, labels */
 ```
 
 **Hierarchy**: 
@@ -34,25 +34,25 @@ This document outlines the complete design system used in the Employee Directory
 
 #### Accent Colors
 ```css
---color-accent-primary: #6366f1   /* Indigo - Primary actions, highlights */
---color-accent-secondary: #8b5cf6 /* Purple - Secondary accents */
---color-accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)
+--color-accent-primary: #FDDC00   /* Bright yellow - Primary actions, highlights */
+--color-accent-secondary: #E6C300 /* Dark yellow - Secondary accents */
+--color-accent-gradient: linear-gradient(135deg, #FDDC00 0%, #E6C300 100%)
 ```
 
-**Application**: Buttons, progress bars, highlights, focus states, brand elements
+**Application**: Buttons, progress bars, highlights, focus states, brand elements. Yellow provides strong contrast against teal background.
 
 #### Status Colors
 ```css
---color-success: #10b981   /* Green - Active status, success states */
---color-warning: #f59e0b   /* Amber - Warning, on-leave status */
+--color-success: #3FBF7F   /* Teal green - Active status, success states */
+--color-warning: #FDDC00   /* Yellow - Warning, on-leave status */
 --color-danger: #ef4444    /* Red - Errors, critical states */
---color-info: #3b82f6      /* Blue - Information, neutral states */
+--color-info: #5dbbdb      /* Cyan - Information, neutral states */
 ```
 
 #### Border Colors
 ```css
---color-border: #2a2a38         /* Default borders */
---color-border-hover: #3a3a4f   /* Hover state borders */
+--color-border: #2D4444         /* Default borders */
+--color-border-hover: #3d5555   /* Hover state borders */
 ```
 
 ### Color Application Examples
@@ -423,10 +423,10 @@ Respects user's OS-level motion preferences.
 ```javascript
 {
   colors: {
-    background: ['#0a0a0f', '#13131a', '#1a1a24'],
-    text: ['#ffffff', '#a0a0b8', '#6b6b85'],
-    accent: ['#6366f1', '#8b5cf6'],
-    status: ['#10b981', '#f59e0b', '#ef4444', '#3b82f6']
+    background: ['#1F2E2E', '#283C3C', '#324646', '#355050'],
+    text: ['#E6ECEC', '#B0C0C0', '#8a9999'],
+    accent: ['#FDDC00', '#E6C300', '#D6AF00'],
+    status: ['#3FBF7F', '#FDDC00', '#ef4444', '#5dbbdb']
   },
   spacing: [4, 8, 16, 24, 32, 48],
   typography: {

@@ -6,7 +6,7 @@ A state-of-the-art, minimalistic employee browsing interface with Netflix-style 
 
 This application embodies:
 - **Minimalistic Design**: Clean, uncluttered interface focusing on content
-- **Modern Aesthetics**: Dark theme with sophisticated color gradients
+- **Modern Aesthetics**: Teal-green dark theme with vibrant yellow accents
 - **Smooth Interactions**: Fluid animations and transitions
 - **Accessibility First**: Full keyboard navigation and ARIA support
 - **Responsive Excellence**: Perfect experience across all devices
@@ -131,26 +131,26 @@ Opens on card click with comprehensive employee information:
 
 ```css
 Background Colors:
-- Primary: #0a0a0f (Deep space black)
-- Secondary: #13131a (Dark slate)
-- Tertiary: #1a1a24 (Midnight blue)
-- Card: #15151d (Card background)
+- Primary: #1F2E2E (Dark teal)
+- Secondary: #283C3C (Medium teal)
+- Tertiary: #324646 (Lighter teal)
+- Card: #355050 (Card background)
 
 Text Colors:
-- Primary: #ffffff (Pure white)
-- Secondary: #a0a0b8 (Soft gray)
-- Tertiary: #6b6b85 (Muted gray)
+- Primary: #E6ECEC (Light gray)
+- Secondary: #B0C0C0 (Medium gray)
+- Tertiary: #8a9999 (Muted gray)
 
 Accent Colors:
-- Primary: #6366f1 (Indigo)
-- Secondary: #8b5cf6 (Purple)
-- Gradient: Indigo → Purple
+- Primary: #FDDC00 (Bright yellow)
+- Secondary: #E6C300 (Dark yellow)
+- Gradient: Yellow → Dark yellow
 
 Status Colors:
-- Success: #10b981 (Green) - Active status
-- Warning: #f59e0b (Amber) - On leave
+- Success: #3FBF7F (Teal green) - Active status
+- Warning: #FDDC00 (Yellow) - On leave
 - Danger: #ef4444 (Red)
-- Info: #3b82f6 (Blue)
+- Info: #5dbbdb (Cyan)
 ```
 
 ## 🏗️ Architecture

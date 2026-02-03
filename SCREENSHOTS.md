@@ -400,30 +400,31 @@ This document provides a visual guide to the Employee Directory interface. Scree
 
 ## Color Showcase
 
-### Dark Theme Palette
+### Teal-Green & Yellow Theme Palette
 ```
 Background Layers:
-███ #0a0a0f  Primary (Deepest)
-███ #13131a  Secondary
-███ #1a1a24  Tertiary
-███ #15151d  Card
-███ #1c1c28  Card Hover
+███ #1F2E2E  Primary (Deepest)
+███ #283C3C  Secondary
+███ #324646  Tertiary
+███ #355050  Card
+███ #3d5a5a  Card Hover
 
 Text Colors:
-███ #ffffff  Primary Text
-███ #a0a0b8  Secondary Text
-███ #6b6b85  Tertiary Text
+███ #E6ECEC  Primary Text
+███ #B0C0C0  Secondary Text
+███ #8a9999  Tertiary Text
 
 Accent Colors:
-███ #6366f1  Indigo (Primary)
-███ #8b5cf6  Purple (Secondary)
+███ #FDDC00  Yellow (Primary)
+███ #E6C300  Dark Yellow (Secondary)
+███ #D6AF00  Active Yellow
 █████████    Gradient
 
 Status Colors:
-███ #10b981  Success (Active)
-███ #f59e0b  Warning (Leave)
+███ #3FBF7F  Success (Active)
+███ #FDDC00  Warning (Leave)
 ███ #ef4444  Danger
-███ #3b82f6  Info
+███ #5dbbdb  Info
 ```
 
 ---
