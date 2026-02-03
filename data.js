@@ -675,3 +675,332 @@ function formatDate(dateString) {
         day: 'numeric'
     });
 }
+
+// ===================================
+// DONOR DATA
+// ===================================
+
+const DONORS = [
+    {
+        id: "DNR001",
+        name: "Global Health Foundation",
+        type: "International",
+        totalFund: 5000000,
+        availableBalance: 3750000,
+        usedAmount: 1250000,
+        constraints: {
+            fcra: true,
+            region: "Pan India",
+            purpose: "Health & Education"
+        },
+        contact: {
+            allowed: true,
+            name: "Dr. Sarah Mitchell",
+            email: "sarah.mitchell@ghf.org",
+            phone: "+1 (555) 123-4567"
+        },
+        fundBreakdown: [
+            { purpose: "Primary Healthcare", amount: 2500000, allocated: 750000 },
+            { purpose: "Medical Equipment", amount: 1500000, allocated: 300000 },
+            { purpose: "Health Education", amount: 1000000, allocated: 200000 }
+        ],
+        disbursementConditions: [
+            "Quarterly disbursements based on milestones",
+            "Detailed expense reports required",
+            "Field visit by donor representative twice a year"
+        ],
+        reportingTimeline: "Quarterly reports due within 15 days of quarter end",
+        cityProgramAllocation: [
+            { city: "Mumbai", program: "Health Initiative", allocated: 500000 },
+            { city: "Delhi", program: "Health Initiative", allocated: 450000 },
+            { city: "Bangalore", program: "Medical Equipment", allocated: 300000 }
+        ],
+        linkedEmployees: ["EMP001", "EMP003", "EMP009"],
+        warningThreshold: 0.75 // 75% used
+    },
+    {
+        id: "DNR002",
+        name: "Tech Innovators Corp",
+        type: "CSR",
+        totalFund: 3500000,
+        availableBalance: 2800000,
+        usedAmount: 700000,
+        constraints: {
+            fcra: false,
+            region: "Karnataka, Tamil Nadu",
+            purpose: "Technology & Skills"
+        },
+        contact: {
+            allowed: true,
+            name: "Rajesh Kumar",
+            email: "rajesh.k@techinnovators.com",
+            phone: "+91 98765 43210"
+        },
+        fundBreakdown: [
+            { purpose: "Digital Literacy", amount: 1500000, allocated: 400000 },
+            { purpose: "Coding Bootcamps", amount: 1200000, allocated: 200000 },
+            { purpose: "Infrastructure", amount: 800000, allocated: 100000 }
+        ],
+        disbursementConditions: [
+            "Monthly tranches upon milestone completion",
+            "Beneficiary tracking mandatory",
+            "Photo documentation required"
+        ],
+        reportingTimeline: "Monthly progress reports and quarterly financial statements",
+        cityProgramAllocation: [
+            { city: "Bangalore", program: "Digital Infrastructure", allocated: 400000 },
+            { city: "Chennai", program: "Tech Training", allocated: 300000 }
+        ],
+        linkedEmployees: ["EMP002", "EMP004", "EMP008"],
+        warningThreshold: 0.2 // 20% used
+    },
+    {
+        id: "DNR003",
+        name: "Bihar Development Trust",
+        type: "National",
+        totalFund: 2000000,
+        availableBalance: 200000,
+        usedAmount: 1800000,
+        constraints: {
+            fcra: false,
+            region: "Bihar only",
+            purpose: "Rural Development"
+        },
+        contact: {
+            allowed: true,
+            name: "Priya Sharma",
+            email: "priya@bihardev.org",
+            phone: "+91 99887 76655"
+        },
+        fundBreakdown: [
+            { purpose: "Rural Infrastructure", amount: 1000000, allocated: 900000 },
+            { purpose: "Livelihood Programs", amount: 600000, allocated: 550000 },
+            { purpose: "Education", amount: 400000, allocated: 350000 }
+        ],
+        disbursementConditions: [
+            "All activities must be in Bihar",
+            "Quarterly site visits mandatory",
+            "Community participation evidence required"
+        ],
+        reportingTimeline: "Quarterly reports with photographic evidence",
+        cityProgramAllocation: [
+            { city: "Patna", program: "Rural Development", allocated: 900000 },
+            { city: "Gaya", program: "Livelihood", allocated: 550000 },
+            { city: "Muzaffarpur", program: "Education Initiative", allocated: 350000 }
+        ],
+        linkedEmployees: ["EMP005", "EMP007", "EMP013"],
+        warningThreshold: 0.9 // 90% used - WARNING!
+    },
+    {
+        id: "DNR004",
+        name: "International Children's Fund",
+        type: "FCRA",
+        totalFund: 4200000,
+        availableBalance: 3360000,
+        usedAmount: 840000,
+        constraints: {
+            fcra: true,
+            region: "Pan India",
+            purpose: "Child Welfare & Education"
+        },
+        contact: {
+            allowed: true,
+            name: "Emily Chen",
+            email: "emily.chen@icf.org",
+            phone: "+44 20 7123 4567"
+        },
+        fundBreakdown: [
+            { purpose: "Child Education", amount: 2000000, allocated: 400000 },
+            { purpose: "Nutrition Programs", amount: 1500000, allocated: 300000 },
+            { purpose: "Child Protection", amount: 700000, allocated: 140000 }
+        ],
+        disbursementConditions: [
+            "FCRA compliance mandatory",
+            "Separate bank account required",
+            "Annual audit by certified CA",
+            "No political or religious activities"
+        ],
+        reportingTimeline: "Monthly financial reports, Quarterly program updates, Annual audit",
+        cityProgramAllocation: [
+            { city: "Delhi", program: "Education Initiative", allocated: 250000 },
+            { city: "Mumbai", program: "Child Welfare", allocated: 300000 },
+            { city: "Kolkata", program: "Nutrition", allocated: 290000 }
+        ],
+        linkedEmployees: ["EMP001", "EMP006", "EMP010"],
+        warningThreshold: 0.2 // 20% used
+    },
+    {
+        id: "DNR005",
+        name: "Admin Overhead Fund",
+        type: "Admin Overhead",
+        totalFund: 1500000,
+        availableBalance: 225000,
+        usedAmount: 1275000,
+        constraints: {
+            fcra: false,
+            region: "Pan India",
+            purpose: "Operational Expenses"
+        },
+        contact: {
+            allowed: false,
+            name: "Internal Fund",
+            email: "finance@organization.org",
+            phone: ""
+        },
+        fundBreakdown: [
+            { purpose: "Salaries & Benefits", amount: 900000, allocated: 765000 },
+            { purpose: "Office Operations", amount: 400000, allocated: 340000 },
+            { purpose: "Technology", amount: 200000, allocated: 170000 }
+        ],
+        disbursementConditions: [
+            "Monthly allocation based on approved budget",
+            "No external reporting required",
+            "Internal audit quarterly"
+        ],
+        reportingTimeline: "Internal monthly financial review",
+        cityProgramAllocation: [
+            { city: "Headquarters", program: "Operations", allocated: 1275000 }
+        ],
+        linkedEmployees: ["EMP003", "EMP013", "EMP014"],
+        warningThreshold: 0.85 // 85% used
+    },
+    {
+        id: "DNR006",
+        name: "Green Earth Alliance",
+        type: "International",
+        totalFund: 3800000,
+        availableBalance: 3230000,
+        usedAmount: 570000,
+        constraints: {
+            fcra: true,
+            region: "Coastal regions",
+            purpose: "Environmental Conservation"
+        },
+        contact: {
+            allowed: true,
+            name: "Maria Rodriguez",
+            email: "maria.r@greenearth.org",
+            phone: "+34 91 123 4567"
+        },
+        fundBreakdown: [
+            { purpose: "Marine Conservation", amount: 1800000, allocated: 270000 },
+            { purpose: "Renewable Energy", amount: 1200000, allocated: 180000 },
+            { purpose: "Community Awareness", amount: 800000, allocated: 120000 }
+        ],
+        disbursementConditions: [
+            "Focus on coastal communities",
+            "Environmental impact assessment required",
+            "Local community involvement mandatory"
+        ],
+        reportingTimeline: "Bi-monthly progress reports with environmental metrics",
+        cityProgramAllocation: [
+            { city: "Mumbai", program: "Marine Conservation", allocated: 200000 },
+            { city: "Chennai", program: "Renewable Energy", allocated: 180000 },
+            { city: "Goa", program: "Community Awareness", allocated: 190000 }
+        ],
+        linkedEmployees: ["EMP009", "EMP012", "EMP015"],
+        warningThreshold: 0.15 // 15% used
+    },
+    {
+        id: "DNR007",
+        name: "Women Empowerment Initiative",
+        type: "National",
+        totalFund: 2500000,
+        availableBalance: 1000000,
+        usedAmount: 1500000,
+        constraints: {
+            fcra: false,
+            region: "Pan India",
+            purpose: "Women's Economic Empowerment"
+        },
+        contact: {
+            allowed: true,
+            name: "Kavita Desai",
+            email: "kavita@womenempowerment.in",
+            phone: "+91 98100 12345"
+        },
+        fundBreakdown: [
+            { purpose: "Skill Training", amount: 1200000, allocated: 720000 },
+            { purpose: "Microfinance", amount: 800000, allocated: 480000 },
+            { purpose: "Market Linkages", amount: 500000, allocated: 300000 }
+        ],
+        disbursementConditions: [
+            "Minimum 80% beneficiaries must be women",
+            "Success stories documentation required",
+            "Quarterly beneficiary surveys"
+        ],
+        reportingTimeline: "Quarterly reports with beneficiary impact data",
+        cityProgramAllocation: [
+            { city: "Delhi", program: "Skill Development", allocated: 500000 },
+            { city: "Jaipur", program: "Microfinance", allocated: 480000 },
+            { city: "Lucknow", program: "Market Access", allocated: 520000 }
+        ],
+        linkedEmployees: ["EMP005", "EMP007", "EMP011"],
+        warningThreshold: 0.6 // 60% used
+    },
+    {
+        id: "DNR008",
+        name: "Education Excellence Corp",
+        type: "CSR",
+        totalFund: 4500000,
+        availableBalance: 4050000,
+        usedAmount: 450000,
+        constraints: {
+            fcra: false,
+            region: "Maharashtra, Gujarat",
+            purpose: "Quality Education"
+        },
+        contact: {
+            allowed: true,
+            name: "Amit Patel",
+            email: "amit.patel@eduexcel.com",
+            phone: "+91 97654 32100"
+        },
+        fundBreakdown: [
+            { purpose: "Teacher Training", amount: 2000000, allocated: 200000 },
+            { purpose: "Digital Classrooms", amount: 1500000, allocated: 150000 },
+            { purpose: "Student Scholarships", amount: 1000000, allocated: 100000 }
+        ],
+        disbursementConditions: [
+            "Government school focus",
+            "Learning outcomes measurement required",
+            "Parent involvement documentation"
+        ],
+        reportingTimeline: "Monthly activity reports, Quarterly financial statements",
+        cityProgramAllocation: [
+            { city: "Mumbai", program: "Education Initiative", allocated: 200000 },
+            { city: "Pune", program: "Digital Learning", allocated: 150000 },
+            { city: "Ahmedabad", program: "Scholarships", allocated: 100000 }
+        ],
+        linkedEmployees: ["EMP001", "EMP004", "EMP014"],
+        warningThreshold: 0.1 // 10% used
+    }
+];
+
+// Filter functions for donor carousels
+function getAllDonors() {
+    return DONORS;
+}
+
+function getDonorsByWarningStatus() {
+    return DONORS.filter(donor => {
+        const usedPercentage = donor.usedAmount / donor.totalFund;
+        return usedPercentage >= (donor.warningThreshold - 0.1);
+    }).sort((a, b) => (b.usedAmount / b.totalFund) - (a.usedAmount / a.totalFund));
+}
+
+function getDonorsByType(type) {
+    if (!type) return DONORS;
+    return DONORS.filter(donor => donor.type === type);
+}
+
+// Calculate donor usage percentage
+function getDonorUsagePercentage(donor) {
+    return Math.round((donor.usedAmount / donor.totalFund) * 100);
+}
+
+// Check if donor is in warning threshold
+function isDonorInWarning(donor) {
+    const usedPercentage = donor.usedAmount / donor.totalFund;
+    return usedPercentage >= (donor.warningThreshold - 0.1);
+}
